@@ -64,7 +64,8 @@ if __name__ == '__main__':
     
     userId= input("Ingrese un userId del 1 al 10: ")
     cuenta= title_completed_count(userId)
-    print("El usuario userId=", userId ,"tiene: ", cuenta ,"titulos completos")
+    print(f"""El usuario userId=  {userId} tiene:
+            cuenta titulos completos""")
    
     db.session.remove()
     db.drop_all()

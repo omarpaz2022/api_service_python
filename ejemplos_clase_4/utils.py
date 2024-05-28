@@ -14,7 +14,8 @@ import io
 import base64
 
 import matplotlib
-matplotlib.use('Agg')   # Para multi-thread, non-interactive backend (avoid run in main loop)
+matplotlib.use('Agg')   # Para multi-thread, non-interactive
+# Backend (avoid run in main loop)
 import matplotlib.pyplot as plt
 # Para convertir matplotlib a imagen y luego a datos binarios
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
@@ -34,5 +35,6 @@ def graficar(x, y):
     # y mostrar en el HTML
     image_html = io.BytesIO()
     FigureCanvas(fig).print_png(image_html)
-    plt.close(fig)  # Cerramos la imagen para que no consuma memoria del sistema
+    plt.close(fig)  # Cerramos la imagen para que no consuma
+    # Memoria del sistema
     return image_html

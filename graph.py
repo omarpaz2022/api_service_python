@@ -2,7 +2,8 @@ import io
 import base64
 
 import matplotlib
-matplotlib.use('Agg')   # Para multi-thread, non-interactive backend (avoid run in main loop)
+matplotlib.use('Agg')   # Para multi-thread, non-interactive backend
+# (avoid run in main loop)
 import matplotlib.pyplot as plt
 # Para convertir matplotlib a imagen y luego a datos binarios
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
